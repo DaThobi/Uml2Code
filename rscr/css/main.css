@@ -1,0 +1,85 @@
+﻿.clear {
+    clear: both;
+}
+
+
+
+body {
+	
+	
+    color: #fff;
+}
+
+.infobox {
+    position: absolute;
+    top: 55px;
+    left: 1070px;
+}
+
+.infobox > h3 {
+    font-size: 20px;
+}
+
+.infobox > p {
+    margin-top: 10px;
+}
+
+.syntaxhighlighter{
+    width: 800px;
+    height: 300px;
+    background-color: rgb(20, 20, 20);
+    display: inline-block;
+}
+
+.dialog {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 200px;
+    display: block;
+    margin: -100px 0px 0px -250px;
+    display: none;
+}
+
+.dialog .headline {
+    width: 490px;
+    border-top: 0px;
+}
+
+.dialog .headline + p {
+    margin: 11px;
+}
+
+.dialog label {
+    font-family: Arial;
+    font-size: 13px;
+}
+
+.dialog .buttons {
+    position: absolute;
+    top: 50%;
+    margin-top: 74px;
+    left: 50%;
+    margin-left: -250px;
+    display: block;
+    width: 500px;
+}
+
+.dialog .buttons button {
+    float: right;
+}
+
+.dialog .buttons a {
+    float: right;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.dialog > img {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}

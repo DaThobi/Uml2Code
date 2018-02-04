@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Uml2Code Tests</title>
+    
+    <link rel="stylesheet" type="text/css" href="rscr/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="rscr/css/lightblueTheme.css" />
+    <link rel="stylesheet" type="text/css" href="rscr/css/darkTheme.css" />
+    <link rel="stylesheet" type="text/css" href="rscr/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="rscr/css/navigation.css"/>
+    <link rel="stylesheet" type="text/css" href="rscr/css/leftmenu.css"/>
+    <link rel="stylesheet" type="text/css" href="rscr/css/drawarea.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="rscr/css/libs/shCore.css"/>
+    <link rel="stylesheet" type="text/css" href="rscr/css/libs/shThemeDefault.css"/>
+
+    <link rel="stylesheet" type="text/css" href="rscr/css/libs/qunit-git.css" />
+    <script type="text/javascript" src="rscr/js/libs/mootools-core-1.4.5-full-nocompat.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/Interface.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/raphaeljs-min.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/jszip.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/jszip-load.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/jszip-deflate.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/jszip-inflate.js"></script>
+    
+    <script type="text/javascript" src="rscr/js/libs/JointJS.js"></script>
+    <!--<script type="text/javascript" src="rscr/js/libs/joint.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/joint.arrows.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/joint.dia.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/joint.dia.uml.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/joint.dia.serializer.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/joint.dia.erd.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/joint.dia.cdm.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/joint.dia.devs.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/joint.dia.fsa.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/joint.dia.org.js"></script> 
+    <script type="text/javascript" src="rscr/js/libs/joint.dia.pn.js"></script>-->
+
+
+
+       <script type="text/javascript" src="rscr/js/Uml2Code.js"></script>
+    <script type="text/javascript" src="rscr/js/IPluginHost.js"></script>
+    <script type="text/javascript" src="rscr/js/Plugins/Shapes/IPluginShape.js"></script>
+    <script type="text/javascript" src="rscr/js/Plugins/Shapes/IPluginDiagramm.js"></script>
+    <script type="text/javascript" src="rscr/js/Plugins/Shapes/AbstractPluginDiagramm.js"></script>
+    <script type="text/javascript" src="rscr/js/Plugins/Shapes/AbstractPluginShape.js"></script>
+
+    <script type="text/javascript" src="rscr/js/PluginHostDiagramm.js"></script>
+    <script type="text/javascript" src="rscr/js/Plugins/Shapes/ShapeKlasse.js"></script>
+    <script type="text/javascript" src="rscr/js/Plugins/Shapes/ShapeAssoziation.js"></script>
+    <script type="text/javascript" src="rscr/js/MetaLanguager.js"></script>
+    <script type="text/javascript" src="rscr/js/PluginHostCode.js"></script>
+    <script type="text/javascript" src="rscr/js/GUI.js"></script>
+    <script type="text/javascript" src="rscr/js/GUIMenu.js"></script>
+    
+
+    <script type="text/javascript" src="rscr/js/Plugins/Shapes/PluginKlassenDiagramm.js"></script>
+    
+    <script type="text/javascript" src="rscr/js/Plugins/Java/IListener.js"></script>
+    <script type="text/javascript" src="rscr/js/Plugins/Java/CodeAbstract.js"></script>
+    <script type="text/javascript" src="rscr/js/Plugins/Java/CodeJava.js"></script>
+    
+    <script type="text/javascript" src="rscr/js/libs/shCore.js"></script>
+    <script type="text/javascript" src="rscr/js/libs/shBrushJava.js"></script>
+
+</head>
+<body class="lightblue">
+    <div class="top-navigation">
+        <ul>
+            <li>Datei
+                <ul class="flyout">
+                    <li value="newDiagramm">Neu...</li>
+                    <li value="openDiagramm">Öffnen...</li>
+                    <li value="saveDiagramm">Speichern...</li>
+                </ul>
+            </li>
+            <li>UML
+                <ul class="flyout">
+                    <li value="showShadow">Schatten</li>
+                    <li value="alreset">AL zurücksetzen</li>
+                </ul>
+            </li>
+            <li>Quellcode
+                <ul class="flyout">
+                    <li value="saveCode">Herunterladen...</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="theme">
+            <select>
+                <option value="lightblue">LightBlue</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+
+
+
+    <div class="left">
+        <div class="shapes">
+            
+        </div>
+        <div class="properties">
+            <span class="headline">Eigenschaften</span>
+            <ul></ul>
+        </div>
+    </div>
+
+    <div id="stage"></div>
+    
+    <div id="code">
+        <pre class="brush: java"></pre>
+    </div>
+    
+    <div style="clear:both;"></div>
+    
+    <div class="openFileDialog dialog">
+        <img src="rscr/img/remove.png" width="20" height="20" class="closedialog"/>
+        <p class="headline">Diagramm öffnen</p>
+        
+        <p>
+            <label>Datei: </label>
+            <input type="file" class="file"/>
+        </p>
+        <div class="buttons">
+            <button action="openDiagramm">Öffnen</button>
+        </div>
+    </div>
+    
+    <div class="saveFileDialog dialog">
+        <img src="rscr/img/remove.png" width="20" height="20" class="closedialog"/>
+        <p class="headline">Diagramm speichern</p>
+        
+        <p>
+            <label>Datei: </label>
+            <input type="text" class="filename" value=""/>
+        </p>
+        <div class="buttons">
+            <a href="#" action="saveDiagramm">Speichern</a>
+        </div>
+    </div>
+    
+    <div class="newFileDialog dialog">
+        <img src="rscr/img/remove.png" width="20" height="20" class="closedialog"/>
+        <p class="headline">Vorheriges Diagramm verwerfen</p>
+        
+        <p>
+            <button action="yes">Ja</button>
+            <button action="no">Nein</button>
+        </p>
+    </div>
+
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script type="text/javascript">
+        window.localStorage.clear();
+        var uml2code = new Uml2Code(800, 303);
+    </script>
+    <script type="text/javascript" src="rscr/js/libs/qunit-git.js"></script>
+    
+    <script type="text/javascript" src="rscr/js/Tests/Uml2CodeTest.js"></script>
+    <script type="text/javascript" src="rscr/js/Tests/PluginHostShapesTest.js"></script>
+    <script type="text/javascript" src="rscr/js/Tests/PluginHostCodegenerierungTest.js"></script>
+    <script type="text/javascript" src="rscr/js/Tests/GUITest.js"></script>
+    <script type="text/javascript" src="rscr/js/Tests/GUIMenuTest.js"></script>
+    <script type="text/javascript" src="rscr/js/Tests/MetaLanguagerTest.js"></script>
+    <script type="text/javascript" src="rscr/js/Plugins/Shapes/Tests/PluginShapeKlasse.js"></script>
+    <script type="text/javascript" src="rscr/js/Plugins/Shapes/Tests/ShapeKlasseTest.js"></script>
+    <script type="text/javascript" src="rscr/js/Plugins/Shapes/Tests/ShapeAssoziationTest.js"></script>
+    <script type="text/javascript" src="rscr/js/Plugins/Java/Tests/CodeJavaTest.js"></script>
+    
+    
+</body>
+</html>

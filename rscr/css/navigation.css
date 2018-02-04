@@ -1,0 +1,55 @@
+﻿.top-navigation {
+    height:35px;
+}
+
+.top-navigation > ul {
+    margin-left:0px;
+}
+
+.top-navigation ul li {
+    text-transform: uppercase;
+    width:100px;
+    height:15px;
+    padding:10px;
+    font-size: 12px;
+    font-family: Arial;
+    float:left;
+    position:relative;
+}
+
+.top-navigation ul li:hover {
+    cursor:default;
+}
+
+.flyout {
+    display:none;
+    position:absolute;
+    top:35px;
+    float:none;
+    margin-left:0px;
+    width:150px;
+    left:0px;
+    z-index:999;
+}
+
+.top-navigation ul li .flyout li {
+    width:170px;
+}
+
+.top-navigation ul li .flyout li:hover {
+    cursor:pointer;
+}
+
+.top-navigation ul li:hover .flyout {
+    display:block;
+}
+
+.top-navigation .theme {
+    float: right;
+}
+
+.top-navigation .theme select {
+    margin: 5px 15px 0px 0px;
+    width: 100px;
+    padding: 2px;
+}

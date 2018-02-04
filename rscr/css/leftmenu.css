@@ -1,0 +1,49 @@
+﻿.left {
+    float:left;
+    height: 700px;
+}
+
+
+
+.headline {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: Arial;
+    width: 280px;
+    height: 11px;
+    display: block;
+    padding: 10px 0px 10px 10px;
+}
+
+.shapes {
+    
+    width:250px;
+    margin-top:20px;
+}
+
+.shapes span {
+    
+}
+
+.left span:hover {
+    cursor:default;
+}
+
+.left ul {
+    width: 290px;
+}
+
+.left ul li {
+    width: 270px;
+    padding: 10px;
+    height: 15px;
+    display: block;
+    font-size: 12px;
+    font-family: Arial;
+
+}
+
+.left .shapes ul li:hover {
+    cursor:pointer;
+}
+
